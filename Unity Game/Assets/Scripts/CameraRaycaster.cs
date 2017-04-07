@@ -7,7 +7,7 @@ public class CameraRaycaster : MonoBehaviour
         Layer.Walkable
     };
 
-    float distanceToBackground = 100f;
+    [SerializeField] float distanceToBackground = 100f;
     Camera viewCamera;
 
     RaycastHit m_hit;
