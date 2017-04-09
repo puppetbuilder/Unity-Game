@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RailMover : MonoBehaviour
 {
-    private Rail rail;
+    public Rail rail;
 
     private int currentSeg;
     private float transition;
