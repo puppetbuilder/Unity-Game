@@ -34,6 +34,18 @@ public class PlayerMovement : MonoBehaviour
 
                     break;
 
+                case Layer.Buyable:
+                    currentClickTarget = cameraRaycaster.hit.point;
+                    print("Buyable!");
+
+                    break;
+
+                case Layer.Plantable:
+                    currentClickTarget = cameraRaycaster.hit.point;
+                    print("Plantable!");
+
+                    break;
+
                 case Layer.Enemy:
                     print("not moving to enemy");
 

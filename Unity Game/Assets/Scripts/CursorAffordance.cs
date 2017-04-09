@@ -6,6 +6,8 @@ public class CursorAffordance : MonoBehaviour {
 
     [SerializeField] Texture2D walkCursor = null;
     [SerializeField] Texture2D targetCursor = null;
+    [SerializeField] Texture2D buyableCursor = null;
+    [SerializeField] Texture2D plantableCursor = null;
     [SerializeField] Texture2D unknownCursor = null;
     [SerializeField] Vector2 cursorHotspot = new Vector2(96, 96);
 
@@ -26,6 +28,12 @@ public class CursorAffordance : MonoBehaviour {
                 break;
             case Layer.Enemy:
                 Cursor.SetCursor(targetCursor, cursorHotspot, CursorMode.Auto);
+                break;
+            case Layer.Buyable:
+                Cursor.SetCursor(buyableCursor, cursorHotspot, CursorMode.Auto);
+                break;
+            case Layer.Plantable:
+                Cursor.SetCursor(plantableCursor, cursorHotspot, CursorMode.Auto);
                 break;
             case Layer.RaycastEndStop:
                 Cursor.SetCursor(unknownCursor, cursorHotspot, CursorMode.Auto);

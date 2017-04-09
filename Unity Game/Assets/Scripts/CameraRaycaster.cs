@@ -4,6 +4,8 @@ public class CameraRaycaster : MonoBehaviour
 {
     public Layer[] layerPriorities = {
         Layer.Enemy,
+        Layer.Buyable,
+        Layer.Plantable,
         Layer.Walkable
     };
 
