@@ -5,6 +5,8 @@ using UnityEngine;
 public class CameraFollow : MonoBehaviour {
 
 	GameObject player;
+	public bool matchRotation = false;
+
 
 	// Use this for initialization
 	void Start () {
@@ -14,5 +16,10 @@ public class CameraFollow : MonoBehaviour {
 	// Update is called once per frame
 	void LateUpdate () {
 		transform.position = player.transform.position;
+
+		if (matchRotation) 
+		{
+			transform.rotation = player.transform.rotation;
+		}
 	}
 }
