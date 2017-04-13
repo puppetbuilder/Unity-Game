@@ -17,6 +17,11 @@ public class CameraFollow : MonoBehaviour {
 	void LateUpdate () {
 		transform.position = player.transform.position;
 
+		if(Input.GetKeyUp(KeyCode.R))
+		{
+			matchRotation = !matchRotation; // toggle matchRotation
+		}
+
 		if (matchRotation) 
 		{
 			transform.rotation = player.transform.rotation;
