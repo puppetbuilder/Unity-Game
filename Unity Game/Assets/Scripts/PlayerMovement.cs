@@ -27,8 +27,6 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.G)) // TODO add to menu later. G for gamepad. 
         {
-            print ("G toggler");
-
             isInDirectMode = !isInDirectMode; //toggle mode
         }
 
@@ -61,9 +59,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetMouseButton(0))
         {
-            print("Cursor raycast hit layer " + cameraRaycaster.layerHit);
-
-            switch (cameraRaycaster.layerHit)
+             switch (cameraRaycaster.layerHit)
             {
                 case Layer.Walkable:
                     currentClickTarget = cameraRaycaster.hit.point;
